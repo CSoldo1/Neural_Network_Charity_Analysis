@@ -6,7 +6,7 @@ One way to use a neural network model is to create a classification algorithm th
 There are a number of advantages to using a neural network instead of a traditional statistical or machine learning model. For instance, neural networks are effective at detecting complex, nonlinear relationships. Additionally, neural networks have greater tolerance for messy data and can learn to ignore noisy characteristics in data. The two biggest disadvantages to using a neural network model are that the layers of neurons are often too complex to dissect and understand (creating a black box problem), and neural networks are prone to overfitting (characterizing the training data so well that it does not generalize to test data effectively). However, both of the disadvantages can be mitigated and accounted for.
 
 ## Resources
-* Data:
+* Data: charity_csv
 * Software: TensorFlow 2.0, JupyterNotebook
 * Package(s): Keras, scikitlearn
 
@@ -23,3 +23,6 @@ Create generalized categorical values and reassign all data points to the new co
 A neural network with more than one hidden layer is known as a deep neural network:
 
 Deep neural network models also are commonly referred to as deep learning models due to their ability to learn from example data, regardless of the complexity or data input type. Just like humans, deep learning models can identify patterns, determine severity, and adapt to changing input data from a wide variety of data sources. Compared to basic neural network models, which require a large number of neurons to identify nonlinear characteristics, deep learning models only need a few neurons across a few hidden layers to identify the same nonlinear characteristics.
+
+# Generate our categorical variable list
+attrition_cat = attrition_df.dtypes[attrition_df.dtypes == "object"].index.tolist()
